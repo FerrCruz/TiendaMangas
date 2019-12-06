@@ -1,0 +1,99 @@
+body{
+    background-image: url(../img/fondo.jpg);   
+}
+
+.Estilo26 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+img{
+	width: 100%;
+}
+
+.modal{
+  background-color: rgba(0,0,0,.4);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 0.6s;
+}
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+
+
+form{
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  height: 450px;
+  padding: 5px 20px 0px 20px;
+  background-image: url(../img/fondo.jpg);
+  box-sizing: border-box;
+  border: 1px solid #8eaec3;
+  box-shadow: 0 0 12px #bbb;
+  border-radius: 2px;
+  font-size: 15px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h3{
+  margin-bottom: 5px;
+}
+
+
+.cuerpo{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+}
+
+.login{
+  margin-top: 32px;
+}
+
+.button{
+border: none;
+width: 100%;
+background-color: rgb(142, 174, 195);
+font-size: 17px;
+padding: 12px;
+border-radius: 11px;
+cursor: pointer;
+}
+
+input[type="text"],
+input[type="value"]{   
+    font-size: 12px;
+    width: 100%; 
+    padding: 5px 0px;
+    border:none;
+    border-radius: 5px;
+}
+
+.button:hover{
+background-color: rgb(209, 223, 231);
+transition: all 450ms ease;
+}
+
+#login-user{
+  padding: 5px;
+}
