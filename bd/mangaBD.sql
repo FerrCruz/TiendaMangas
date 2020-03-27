@@ -8,7 +8,7 @@ CREATE TABLE Mangas(
 	Autor varchar(50),
 	Tomo varchar(20),
 	Precio float,
-	Imagen VARCHAR(500),
+	Imagen VARCHAR(600),
 	PRIMARY KEY(MangaID)
 );
 

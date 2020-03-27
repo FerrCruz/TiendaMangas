@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="es" name="language" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>MangasxD</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,6 +17,7 @@
         <ul class="list-unstyled row" id="itemBarra">
           <li><a href="">Home</a></li>
           <?php
+
           if(!isset($_SESSION)){
             session_start();
           }
@@ -30,13 +32,9 @@
           }else{
             echo "<li><a href='subpaginas/login.html'>Iniciar Sesion</a></li>";
           }
+          
         ?>
-         
-          <!--
-          <li><a href="">API</a></li>
-          <li><a href="#">Acerca de</a></li>
-          <li><a href="#">Contacto</a></li> 
-          -->
+        
         </ul>
         <div>
           <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo4.png" alt="logo"></a>
@@ -52,10 +50,30 @@
           </div>
 
           <ul class="animes list-unstyled row" id="articulos">
+          <?php
+
+          include("php/connect.php");
+          $sql = "SELECT * FROM mangas";
+          $result = $conexion->query($sql);
+
+          if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+            echo"<li class='col-6 col-sm-4 col-md-3 col-xl-2'>
+                  <article class='anime'><a href=''><img src=". $row["Imagen"]." alt='img'>
+                    </a><h3 class='title' style='font-size: 18px'>". $row["Nombre"]."</h3>
+                    <p style='font-size: 16px; color: black; margin: 0;'>Autor: ". $row["Autor"]."</p>
+                    <p style='font-size: 16px; color: black; margin: 0;'>Tomo: ". $row["Tomo"]."</p>
+                    <p style='font-size: 16px; color: black;'>Precio: ". $row["Precio"]."</p>
+                  </article>
+                </li>";
+            }
+          }
+          $conexion->close();
+          ?>
           </ul>
         </aside>
 
-        <!--
+<!--         
         <aside class="sidebar col-12">
           <div class="fixed">
             <section>
@@ -91,7 +109,7 @@
     </footer>
   </div>
 <script src="js/jquery.js"></script>
-<script src="js/mangas.js"></script>
-<script src="js/listar.js"></script>
+<!-- <script src="js/mangas.js"></script>
+<script src="js/listar.js"></script>  -->
 </body>
 </html>

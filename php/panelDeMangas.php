@@ -49,24 +49,5 @@
 		header('Location: ../subpaginas/panelDeMangas.php');
 			
 	}
-
-	//BORRAR
-	if(isset($_POST['botonEliminar'])) {
-		$titulo = $_POST['Titulo'];
-		$autor = $_POST['Autor'];
-
-		$query = $conexion->prepare("SELECT mangaId from mangas where nombre = ? and autor = ?");
-		$query->bind_param("ss", $titulo, $autor);
-	    $query->execute();
-	    $query->bind_result($id);
-		$query->fetch();
-	    $query->close();
-		
-		$query = $conexion->prepare("DELETE FROM mangas where mangaId = ?");
-        $query->bind_param("s",$id);
-        $query->execute();
-        $query->close();
-		header('Location: ../subpaginas/panelDeMangas.php');
-		}
 			
 ?>

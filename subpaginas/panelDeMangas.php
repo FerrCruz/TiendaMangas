@@ -12,6 +12,7 @@
 <html>
    <head>
       <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <title>Panel de Control</title>
       <link rel="stylesheet" type="text/css" href="../css/panelDeMangas.css">
       
@@ -51,15 +52,6 @@
                                                  <a href="../index.php"><button style="float: right; cursor: pointer;">HOME</button></a>
                                              </div>
                                             
-                                             <!--
-                                             <tr bgcolor="#002842" height="17">
-                                                <td height="50" colspan="6" bgcolor="#8EAEC3">
-                                                   <div align="center" class="Estilo26">
-                                                      <font color="#000000" size="4"><strong><a name="capital"></a>MANGAS</strong></font>
-                                                   </div>
-                                                </td>
-                                             </tr>   
-                                             -->     
                                              <table width="100%" cellpadding="10" cellspacing="1">
 
                                                 <button onclick="agregar('formAgregar');"  style="width: 100%; padding: 10px;">AGREGAR</button>
@@ -86,13 +78,7 @@
                                                          <span style="text-transform: uppercase"><span class="Estilo26" style="font-size: 15px;">Precio</span></span>
                                                          </font>
                                                       </td>
-                                                      <!--
-                                                      <td width="18%" bgcolor="#002842">
-                                                         <p style="text-align: center;"><font color="#FFFFF0">
-                                                         <span style="text-transform: uppercase"><span class="Estilo26" style="font-size: 15px;">URL</span></span>
-                                                         </font>
-                                                      </td>
-                                                   -->
+
                                                       <td width="10%" bgcolor="#002842">
                                                          <p style="text-align: center;"><font color="#FFFFF0">
                                                          <span style="text-transform: uppercase"><span class="Estilo26" style="font-size: 15px;">Imagen</span></span>
@@ -114,48 +100,41 @@
                                                    while($consulta = mysqli_fetch_array($resultados)){
                                                 ?>
 
-                                                <tr>
-                                                   <td width="20%" bgcolor="#002842">
-                                                      <p style="margin-left: 10px"><font color="#FFFFF0">
-                                                         <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Nombre'] ?></span></span></font>
-                                                   </td>
-                                                   <td width="20%" bgcolor="#002842">
-                                                      <p style="margin-left: 10px"><font color="#FFFFF0">
-                                                         <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Autor'] ?></span></span></font>
-                                                   </td>
-                                                   <td width="20%" bgcolor="#002842">
-                                                      <p style="margin-left: 10px; text-align: center;"><font color="#FFFFF0">
-                                                         <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Tomo'] ?></span></span></font>
-                                                   </td>
-                                                   <td width="20%" bgcolor="#002842">
-                                                      <p style="margin-left: 10px; text-align: center;"><font color="#FFFFF0">
-                                                         <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Precio'] ?></span></span></font>
-                                                   </td>
-
-                                                   <!--
-                                                   <td width="18%" bgcolor="#002842">
-                                                      <p style="margin-left: 10px"><font color="#FFFFF0">
-                                                         <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Imagen'] ?></span></span></font>
-                                                   </td>
-                                                -->
-                                                   <td width="10%" style="padding: 0px;" bgcolor="#002842">
-                                                      <?php $url= $consulta['Imagen'];
-                                                         echo "<a target='_blank' href='../$url'><img src='../$url'></a>";
-                                                       ?>
-                                                   </td>
-                                                   <!--
-                                                   <td  bgcolor="#002842">
-                                                      <p style="text-align: center;"><font color="#FFFFF0">
-                                                      <span style="text-transform: uppercase"></span>
-                                                      </font>
-                                                   </td>
-                                                -->
-
-                                                   <td width="10%" class="icon" bgcolor="#002842">
-                                                      <a onclick="editar('formAgregar');" style="cursor: pointer;"><img style="height: 50px; margin-bottom: 5px;" src="../img/edit.svg"></a>
-                                                      <a onclick="eliminar('formAgregar');" style=" cursor: pointer;"><img style="height: 50px; " src="../img/trash.svg"></a>
-                                                   </td>
-                                                </tr>
+                                                   <tr>
+                                                      <td width="20%" bgcolor="#002842">
+                                                         <p style="margin-left: 10px"><font color="#FFFFF0">
+                                                            <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Nombre'] ?></span></span></font>
+                                                      </td>
+                                                      <td width="20%" bgcolor="#002842">
+                                                         <p style="margin-left: 10px"><font color="#FFFFF0">
+                                                            <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Autor'] ?></span></span></font>
+                                                      </td>
+                                                      <td width="20%" bgcolor="#002842">
+                                                         <p style="margin-left: 10px; text-align: center;"><font color="#FFFFF0">
+                                                            <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Tomo'] ?></span></span></font>
+                                                      </td>
+                                                      <td width="20%" bgcolor="#002842">
+                                                         <p style="margin-left: 10px; text-align: center;"><font color="#FFFFF0">
+                                                            <span style="text-transform: uppercase"><span class="Estilo26"><?php echo $consulta['Precio'] ?></span></span></font>
+                                                      </td>
+                                               
+                                                      <td width="10%" style="padding: 0px;" bgcolor="#002842">
+                                                         <?php $url= $consulta['Imagen'];
+                                                            echo "<a target='_blank' href='../$url'><img src='../$url'></a>";
+                                                         ?>
+                                                      </td>
+                                    
+                                                      <td width="10%" class="icon" bgcolor="#002842">
+                                                      
+                                                         
+                                                         <?php
+                                                            echo "<a onclick='editar(".$consulta["MangaID"].");' style=' cursor: pointer;'><img style='height: 50px;' margin-bottom: 5px;' src='../img/edit.svg'>"; 
+                                                            //echo '<a type='button' onclick='editar(".$consulta[""].");' style='cursor: pointer;' ><img style='height: 50px; margin-bottom: 5px;' src='../img/edit.svg'></a>";
+                                                            echo "<a onclick='eliminar(".$consulta["MangaID"].");' style=' cursor: pointer;'><img style='height: 50px; ' src='../img/trash.svg'>";
+                                                         ?>
+                                                         <!-- <a onclick="eliminar('formAgregar');" style=" cursor: pointer;"><img style="height: 50px; " src="../img/trash.svg"></a> -->
+                                                      </td>
+                                                   </tr>
                                                 <?php 
                                                    }
                                                 ?>
@@ -196,7 +175,7 @@
 
          var tipo = false;
         function agregar(categoria){
-         
+         alert("Para ingresar un nuevo manga haga click en el enlace que se encuentra abajo a la izquierda.");
          if (tipo==false){
             var estructura = ' \
              <a href="#miModal">Abrir Modal</a>\
@@ -216,7 +195,7 @@
                                     <h3>PRECIO</h3>\
                                     <input name="Precio" id="login-user" type="value" class="form-control " maxlength="32" required>\
                                     <h3>IMAGEN</h3>\
-                                    <input style="border:none;" name="Imagen" id="login-user" type="file" class="form-control " maxlength="500" required>\
+                                    <input style="border:none;" name="Imagen" id="login-user" type="text" class="form-control " maxlength="1000" required>\
                                 </div>\
                                 <div style="padding: 15px 0px;">\
                                     <input type="submit" name="botonAgregar" class="button" value="Registrar">\
@@ -236,7 +215,8 @@
     $("#"+categoria).append(estructura);    
 }
 
-       function editar(categoria){
+       function editar(id){   
+         let cosa = "formAgregar";
          
          if (tipo==false){
             var estructura = ' \
@@ -249,7 +229,7 @@
                             <article class="login">\
                                 <div>\
                                     <h3>TITULO</h3>\
-                                    <input name="Titulo" id="login-user" type="text" class="form-control " maxlength="32" required>\
+                                    <input name="Titulo" id="titulo" id="login-user" type="text" class="form-control " maxlength="32" required >\
                                     <h3>AUTOR</h3>\
                                     <input name="Autor" id="login-user" type="text" class="form-control " maxlength="32" required>\
                                     <h3>TOMO</h3>\
@@ -257,10 +237,10 @@
                                     <h3>PRECIO</h3>\
                                     <input name="Precio" id="login-user" type="value" class="form-control " maxlength="32" required>\
                                     <h3>IMAGEN</h3>\
-                                    <input style="border:none;" name="Imagen" id="login-user" type="file" class="form-control " maxlength="32" required>\
+                                    <input style="border:none;" name="Imagen" id="login-user" type="text" class="form-control " maxlength="600" required>\
                                 </div>\
                                 <div style="padding: 15px 0px;">\
-                                    <input type="submit" name="botonEditar" class="button" value="Registrar">\
+                                    <input type="submit" name="botonEditar" class="button" value="Editar">\
                                 </div>\
                             </article>\
                         </form>\
@@ -271,39 +251,54 @@
           tipo=true;
          }        
 
-    $("#"+categoria).append(estructura);    
+    $("#"+cosa).append(estructura);    
 }
 
-  function eliminar(categoria){
-         
-         if (tipo==false){
-            var estructura = ' \
-             <a href="#miModal">Abrir Modal</a>\
-               <div id="miModal" class="modal">\
-                    <div class="modal-contenido">\
-                      <div class="cuerpo">\
-                          <form action="../php/panelDeMangas.php" method="POST">\
-                           <a href="#" class="close">X</a>\
-                            <article class="login">\
-                                <div>\
-                                    <h3>TITULO</h3>\
-                                    <input name="Titulo" id="login-user" type="text" class="form-control " maxlength="32" required>\
-                                    <h3>AUTOR</h3>\
-                                    <input name="Autor" id="login-user" type="text" class="form-control " maxlength="32" required>\
-                                </div>\
-                                <div style="padding: 15px 0px;">\
-                                    <input type="submit" name="botonEliminar" class="button" value="Registrar">\
-                                </div>\
-                            </article>\
-                        </form>\
-                      </div>\
-                     </div>\
-               </div>\
-          ';
-          tipo=true;
-         }
-    $("#"+categoria).append(estructura);    
-}
+  function eliminar(id){
+
+       $.ajax({
+               data: {'id':id},
+               url: '../php/eliminardatos.php',
+               type: "post" ,
+				   success: function(retorno){
+          if(retorno == "OK"){
+            
+            alert("Se elimino el articulo");
+                     location.reload();
+          }
+        }
+            });
+        }
+
+
+         // if (tipo==false){
+         //    var estructura = ' \
+         //     <a href="#miModal">Abrir Modal</a>\
+         //       <div id="miModal" class="modal">\
+         //            <div class="modal-contenido">\
+         //              <div class="cuerpo">\
+         //                  <form action="../php/panelDeMangas.php" method="POST">\
+         //                   <a href="#" class="close">X</a>\
+         //                    <article class="login">\
+         //                        <div>\
+         //                            <h3>TITULO</h3>\
+         //                            <input name="Titulo" id="login-user" type="text" class="form-control " maxlength="32" required>\
+         //                            <h3>AUTOR</h3>\
+         //                            <input name="Autor" id="login-user" type="text" class="form-control " maxlength="32" required>\
+         //                        </div>\
+         //                        <div style="padding: 15px 0px;">\
+         //                            <input type="submit" name="botonEliminar" class="button" value="Registrar" onClick='eliminar(" . $row['id']. ");'>\
+         //                        </div>\
+         //                    </article>\
+         //                </form>\
+         //              </div>\
+         //             </div>\
+         //       </div>\
+         //  ';
+//           tipo=true;
+//          }
+//     $("#"+categoria).append(estructura);    
+// }
 
     </script>
    </body>

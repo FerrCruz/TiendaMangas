@@ -3,9 +3,9 @@
 	$user = "root";
 	$password = "";
 	$db = "VentaMangas";
+	$port = "3306";
+	$conexion = mysqli_connect($server, $user, $password, $db,$port);
 	
-	$conexion = new mysqli($server, $user, $password, $db);
-	
-	$conexion->set_charset("utf8");
+	mysqli_set_charset($conexion, "utf8");
 
 ?>
