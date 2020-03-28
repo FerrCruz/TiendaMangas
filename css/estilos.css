@@ -1,0 +1,103 @@
+body{
+	background-image: url("../img/fondo.jpg");
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img.logo2{
+    width: 100px;
+    height: 100px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo .logo{
+	width: 100px;
+    height: 100px;
+    margin-left: auto; 
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+}
+
+h1,p{
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.formulario{
+	margin-top: 150px;
+	padding: 3px;
+	border: 2px solid #aaa;
+    background-color: #fff;
+    }
+
+.contenedor{
+	width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    
+}
+
+.input-contenedor{
+	margin-bottom: 15px;
+    border: 1px solid #aaa;
+
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width:100%;
+    padding: 10px;
+    border: none;
+}
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background-color: #007bff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}
+
+@media(min-width:200px){
+    .formulario{
+        border-radius: 2%;
+    }
+}
+
+.button:hover{
+    background: cadetblue;
+}
+
+a{
+    color: #1A2537;
+    text-decoration: none;
+  }
+
+.direccion:hover{
+    color: cadetblue;
+}
+.recupContraseña{
+    text-align: right;
+}

@@ -30,9 +30,16 @@ CREATE TABLE Cuentas(
 	CuentaID int AUTO_INCREMENT,
 	usuario varchar(50),
 	contrasenia varchar(50),
+	dni int,
+	email varchar(80),
+	intentos int,
+	codigo_recu varchar(10),
+	tiempo datetime,
 	primary key(CuentaID)
 );
 
 INSERT INTO Cuentas VALUES
-("","admin","admin"),
-("","fernando","123");
+("","admin","admin",12345678,"admin@gmail.com",0,null,null),
+("","fernando","123",23456789,"fernando@hotmail.com",0,null,null);
+
+

@@ -29,3 +29,7 @@ body{
    background-image: url(../img/fondo.jpg);
    min-height: 100vh;
 }
+
+.btn-primary{
+    background: #1a2537;
+}

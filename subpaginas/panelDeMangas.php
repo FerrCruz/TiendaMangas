@@ -175,7 +175,7 @@
 
          var tipo = false;
         function agregar(categoria){
-         alert("Para ingresar un nuevo manga haga click en el enlace que se encuentra abajo a la izquierda.");
+         
          if (tipo==false){
             var estructura = ' \
              <a href="#miModal">Abrir Modal</a>\
@@ -216,7 +216,8 @@
 }
 
        function editar(id){   
-         let cosa = "formAgregar";
+         let cosa = "formAgregar"
+
          
          if (tipo==false){
             var estructura = ' \
@@ -240,7 +241,7 @@
                                     <input style="border:none;" name="Imagen" id="login-user" type="text" class="form-control " maxlength="600" required>\
                                 </div>\
                                 <div style="padding: 15px 0px;">\
-                                    <input type="submit" name="botonEditar" class="button" value="Editar">\
+                                    <input type="submit" name="botonEditar" class="button" value="Registrar">\
                                 </div>\
                             </article>\
                         </form>\
