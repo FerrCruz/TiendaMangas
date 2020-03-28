@@ -22,18 +22,19 @@
                         
                         <div class="form-group">
                             <input placeholder="Usuario" name="user" id="login-user" type="text" class="form-control " maxlength="32" required>
-                            <input placeholder="Contraseña" name="pass" type="password" class="form-control " maxlength="32" required> 
+                            <input placeholder="Contraseña" name="pass" id="pass" type="password" class="form-control " maxlength="32" required> 
                         </div>
                         <div class="form-group">
                             <input type="submit" name="" class="btn btn-primary btn-lg btn-block" value="Ingresar">
                         </div>
                         <footer>
-                            <a href="paginasRecuperacion/pagina1DeRecuperacion.php">Olvidaste tu contraseña?</a>
+                            <a href="">Olvidaste tu contraseña?</a>
                         </footer>
                     </article>
                 </div>
             </div>
         </form>
     </div>
+    <script src="../js/jquery.js"></script>
 </body>
 </html>

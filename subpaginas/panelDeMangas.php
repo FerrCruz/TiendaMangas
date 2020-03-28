@@ -270,37 +270,6 @@
         }
             });
         }
-
-
-         // if (tipo==false){
-         //    var estructura = ' \
-         //     <a href="#miModal">Abrir Modal</a>\
-         //       <div id="miModal" class="modal">\
-         //            <div class="modal-contenido">\
-         //              <div class="cuerpo">\
-         //                  <form action="../php/panelDeMangas.php" method="POST">\
-         //                   <a href="#" class="close">X</a>\
-         //                    <article class="login">\
-         //                        <div>\
-         //                            <h3>TITULO</h3>\
-         //                            <input name="Titulo" id="login-user" type="text" class="form-control " maxlength="32" required>\
-         //                            <h3>AUTOR</h3>\
-         //                            <input name="Autor" id="login-user" type="text" class="form-control " maxlength="32" required>\
-         //                        </div>\
-         //                        <div style="padding: 15px 0px;">\
-         //                            <input type="submit" name="botonEliminar" class="button" value="Registrar" onClick='eliminar(" . $row['id']. ");'>\
-         //                        </div>\
-         //                    </article>\
-         //                </form>\
-         //              </div>\
-         //             </div>\
-         //       </div>\
-         //  ';
-//           tipo=true;
-//          }
-//     $("#"+categoria).append(estructura);    
-// }
-
     </script>
    </body>
 </html>
