@@ -182,7 +182,7 @@
                <div id="miModal" class="modal">\
                     <div class="modal-contenido">\
                       <div class="cuerpo">\
-                          <form action="../php/panelDeMangas.php" method="POST">\
+                          <form action="../php/panelDeMangas.php" method="POST" enctype="multipart/form-data">\
                            <a href="#" class="close">X</a>\
                             <article class="login">\
                                 <div>\
@@ -196,6 +196,7 @@
                                     <input name="Precio" id="login-user" type="value" class="form-control " maxlength="32" required>\
                                     <h3>IMAGEN</h3>\
                                     <input style="border:none;" name="Imagen" id="login-user" type="text" class="form-control " maxlength="1000" required>\
+                                    <input name="archivo" type="file" class="instextbox">\
                                 </div>\
                                 <div style="padding: 15px 0px;">\
                                     <input type="submit" name="botonAgregar" class="button" value="Registrar">\
@@ -239,6 +240,7 @@
                                     <input name="Precio" id="login-user" type="value" class="form-control " maxlength="32" required>\
                                     <h3>IMAGEN</h3>\
                                     <input style="border:none;" name="Imagen" id="login-user" type="text" class="form-control " maxlength="600" required>\
+                                    <input name="archivo" type="file" class="instextbox">\
                                 </div>\
                                 <div style="padding: 15px 0px;">\
                                     <input type="submit" name="botonEditar" class="button" value="Registrar">\

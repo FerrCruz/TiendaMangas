@@ -30,7 +30,7 @@
 
 
           }else{
-            echo "<li><a href='subpaginas/login.html'>Iniciar Sesion</a></li>";
+            echo "<li><a href='subpaginas/login.php'>Iniciar Sesion</a></li>";
           }
           
         ?>
