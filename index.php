@@ -15,6 +15,7 @@
     <header>
       <nav class="menu  navbar-expand-lg navbar-light bg-secondary">
         <ul class="list-unstyled row" id="itemBarra">
+          <li><a href="subpaginas/contacto.html">Contacto</a></li>
           <li><a href="">Home</a></li>
           <?php
 
@@ -47,6 +48,7 @@
         <aside class="principal col-12">
           <div class="header">
             <h1 style="text-align: center; padding: 25px;">Mangas en Emisión</h1>
+            <p style="text-align: center; padding: 15px; font-size: 40px;">Horario: <?php echo date("H:i:s")?>.</p>
           </div>
 
           <ul class="animes list-unstyled row" id="articulos">
@@ -104,6 +106,7 @@
               <li class="nav-item"><a class="nav-link fa-youtube fab" href="" rel="nofollow" target=""></a></li>
             </ul>
           </div>
+          <p style='color:white;'>&copy <?php echo date('Y')?> Tienda Mangas</p>
         </nav>
       </div>
     </footer>
