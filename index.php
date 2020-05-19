@@ -18,7 +18,6 @@
           <li><a href="subpaginas/contacto.html">Contacto</a></li>
           <li><a href="">Home</a></li>
           <?php
-
           if(!isset($_SESSION)){
             session_start();
           }
@@ -73,14 +72,12 @@
           $conexion->close();
           ?>
           </ul>
-        </aside>
-
-<!--         
-        <aside class="sidebar col-12">
+        </aside>                
+        <!-- <aside class="sidebar col-12">
           <div class="fixed">
             <section>
               <div class="header">
-                <h3 class="title fa-folder">Generos</h3>
+                <h3>Generos</h3>
                 <ul class="categories list-unstyled">
                   <li><a href="/directorio?genero=vampiros" class="dropdown-item">Vampiros</a></li>
                   <li><a href="/directorio?genero=yaoi" class="dropdown-item">Yaoi</a></li>
@@ -89,9 +86,7 @@
               </div>
             </section>
           </div>
-        </aside>
-        -->
-        
+        </aside> -->   
       </div>
     </div>
 
