@@ -4,17 +4,25 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="../css/contacto.css">
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
      <title>Contacto</title>
 </head>
 <body>
      <div id="block">  
-          <form action="" method="POST">                          
-                    <input class="text-input" placeholder="Tu nombre...." name="name" type="text" maxlength="32">           
-                    <input class="text-input" placeholder="Email...." name="email" type="text" maxlength="100"> 
-                    <textarea name="comment" class="text-input" placeholder="Tu Mensaje...."></textarea>                    
-                    <input class="button" type="submit" value="Enviar">                                                
+          <form action="../php/contacto.php" method="POST">
+               <h2>CONTACTO</h2>
+               <label>Nombre</label>                      
+               <input class="text-input" placeholder="Tu nombre...." name="nombre" type="text" maxlength="32">
+               <label>Email</label>  
+               <input class="text-input" placeholder="Email...." name="email" type="text" maxlength="100">
+               <label>Mensaje</label>   
+               <textarea name="comment" class="text-input" placeholder="Tu Mensaje...."></textarea>                    
+               <input class="button" type="submit" value="Enviar">                                                
           </form>  
+     </div>
+     <div align="center">
+          <img src="../img/nezuko56.png" alt="nezuko">
      </div>  
 </body>
 </html>

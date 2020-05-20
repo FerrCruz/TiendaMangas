@@ -1,18 +1,72 @@
 *{
-     margin: 0px;
+     box-sizing: border-box;
+}
+
+body{
+     background-image: url(../img/fondo.jpg); 
 }
 .text-input{
-     margin: 5px;
-     padding: 10px;
+     margin-bottom: 10px;
      width: 100%;
+     border: none;
+}
+
+input[type="text"],
+input[type="submit"],
+textarea{
+     font-size: 12px;
+     padding: 10px 0px 10px 3px;
+     border:none;
+     border-radius: 5px;
+     font-family: 'Noto Sans JP', sans-serif;
 }
 
 #block{
-     width: 300px;
+     top: 50%;
+     left: 50%;
+     float: left;
+     margin-top: 75px;
+     margin-left: 60px;
+     
+}
+
+img{
+     margin-top: 25px;
+     width: 500px;
+     height: 500px;
+}
+
+form{
+     
+     padding: 10px;
+     width: 370px;
 }
 
 .button{
      padding: 10px;
      width: 100%;
-     margin: 5px;
+     border: none;
+     background-color: rgb(196, 205, 200);
+}
+
+.button:hover{
+     background-color: rgb(209, 223, 231);
+     transition: all 450ms ease;
+     cursor: pointer;
+     }
+textarea{
+     resize: none;
+     height: 100px;
+}
+
+h2{
+     font-size: 22px;
+     text-align: center;
+     font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+label{
+     font-size: 15px;
+     font-family: 'Noto Sans JP', sans-serif;
 }
